@@ -351,7 +351,7 @@ Gives:
     express    3.8.0   3.8.0   4.3.0  express
     split     0.2.10  0.2.10   0.3.0  logfmt > split
 
-I'm not using logfmt so removed that from ```package.json```
+I'm not using logfmt so removed that from ```package.json```, I just added it because it was in the sample
 
 I can upgrade express so I changed ```package.json``` to
 
@@ -359,7 +359,12 @@ I can upgrade express so I changed ```package.json``` to
         "express": "4.3.0"
     },
 
-Not entirely sure here:
+#npm install
+
+[http://stackoverflow.com/questions/12478679/npm-install-vs-update-whats-the-difference](http://stackoverflow.com/questions/12478679/npm-install-vs-update-whats-the-difference)
+For us it doesn't seem to matter which we do here:
 
     $npm install
     $npm update
+
+
