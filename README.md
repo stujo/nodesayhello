@@ -281,15 +281,23 @@ Yeay! Able to set port
 ##View the Test
 
 Browse to:
-    http://nodesayhello.herokuapp.com/
 
-![Screenshot](heroku-screenshot.png)
+* http://nodesayhello.herokuapp.com/
+
+![Screenshot](public/heroku-screenshot.png)
 
 Yeay!
 
 ##Commit the heroku changes to master
 
+    $ git add .
+    $ git commit -m'Adding Heroku Screenshot'
+    $ git checkout master
+    $ git merge heroku_deployable
+
+#Deploy master to Heroku
+
+    $ git push heroku master
 
 
-
-
+Yeay!
