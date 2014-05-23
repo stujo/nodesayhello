@@ -321,7 +321,7 @@ Allows us to start the app like this:
 
     $ npm start
 
-## node_modules revisited!
+##node_modules revisited!
 
 Hmm!
 
@@ -331,4 +331,35 @@ Maybe now the advice is NOT to include node_modules in git?
 
 I guess this depends, so let's try removing node_modules from git and seeing what happens
 
+    $ echo node_modules >> .gitignore
+    $ git rm -r --cached node_modules
+    $ git add --all
+    $ git commit -m 'Remove the now ignored directory "node_modules"'
+    $ git push heroku master
 
+and...Seems to still work :)
+
+##npm outdated
+
+Running
+
+    $ npm outdated
+
+Gives:
+
+    Package  Current  Wanted  Latest  Location
+    express    3.8.0   3.8.0   4.3.0  express
+    split     0.2.10  0.2.10   0.3.0  logfmt > split
+
+I'm not using logfmt so removed that from ```package.json```
+
+I can upgrade express so I changed ```package.json``` to
+
+    "dependencies": {
+        "express": "4.3.0"
+    },
+
+Not entirely sure here:
+
+    $npm install
+    $npm update
