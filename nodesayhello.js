@@ -11,11 +11,17 @@ var express = require('express');
 // Create the App
 var app = express();
 
+var img_path = "nodesayhello.png";
 
 // Set up root route
 app.get('/', function (req, res) {
-  res.send('Hello World');
+  res.set('Content-Type', 'text/html');
+  res.send(200, '<html><body>Hello World <img src="' + img_path + '"/></body></html>');
 });
+
+
+// Serve Static Files from public folder
+app.use(express.static(__dirname + '/public'));
 
 // Start the Server
 var server = app.listen(PORT_NUMBER, function () {
