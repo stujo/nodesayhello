@@ -274,5 +274,22 @@ Yeay! Able to set port
 
     $ heroku apps:create nodesayhello
 
+##Deploy Heroku Testing Branch
+
+    $ git push heroku heroku_deployable:master
+
+##View the Test
+
+Browse to:
+    http://nodesayhello.herokuapp.com/
+
+![Screenshot](heroku-screenshot.png)
+
+Yeay!
+
+##Commit the heroku changes to master
+
+
+
 
 
