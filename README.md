@@ -301,3 +301,34 @@ Yeay!
 
 
 Yeay!
+
+
+#Heroku's Recommended Node Habits:
+
+Let's take a look at this:
+
+* [https://blog.heroku.com/archives/2014/3/11/node-habits](https://blog.heroku.com/archives/2014/3/11/node-habits)
+
+##npm start
+
+Adding a start script to our ```package.json```
+
+    "scripts": {
+        "start": "node nodesayhello.js"
+    }
+
+Allows us to start the app like this:
+
+    $ npm start
+
+## node_modules revisited!
+
+Hmm!
+
+* [https://blog.heroku.com/archives/2014/3/11/node-habits#5-keep-dependencies-out-of-source-control](https://blog.heroku.com/archives/2014/3/11/node-habits#5-keep-dependencies-out-of-source-control)
+
+Maybe now the advice is NOT to include node_modules in git?
+
+I guess this depends, so let's try removing node_modules from git and seeing what happens
+
+
