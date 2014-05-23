@@ -1,14 +1,16 @@
 {
   "name": "nodesayhello",
   "version": "0.0.1",
-  "description" : "My first Node.js Web Application",
-  "homepage" : "https://github.com/stujo/nodesayhello",
-  "keywords" : ["hello world"],
-  "author" : "Stujo https://github.com/stujo/",
-  "main" : "nodesayhello.js",
+  "description": "My first Node.js Web Application",
+  "homepage": "https://github.com/stujo/nodesayhello",
+  "keywords": [
+    "hello world"
+  ],
+  "author": "Stujo https://github.com/stujo/",
+  "main": "nodesayhello.js",
   "private": true,
   "dependencies": {
-    "express": "3.x"
+    "express": "^3.8.0",
+    "logfmt": "^1.1.2"
   }
 }
-

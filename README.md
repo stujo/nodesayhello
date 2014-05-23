@@ -205,6 +205,74 @@ Adding a static server from the public folder (which serves from / not /public)
     });
 
 
+#Heroku
+
+##Git Branch for experiments
+
+    $ git checkout -b heroku_deployable
+
+##Update package.json
+
+Update ```package.json``` with:
+
+    $ npm install express logfmt --save
+
+Add ```engines```
+
+    "engines": {
+      "node": "0.10.x"
+    }
+
+To give us:
+
+    {
+      "name": "nodesayhello",
+      "version": "0.0.1",
+      "description": "My first Node.js Web Application",
+      "homepage": "https://github.com/stujo/nodesayhello",
+      "keywords": [
+        "hello world"
+      ],
+      "author": "Stujo https://github.com/stujo/",
+      "main": "nodesayhello.js",
+      "private": true,
+      "dependencies": {
+        "express": "^3.8.0",
+        "logfmt": "^1.1.2"
+      },
+      "engines": {
+        "node": "0.10.x"
+      }
+    }
+
+##Add Procfile
+
+Add ```Procfile```:
+
+    web: node nodesayhello.js
+
+##Test Locally
+
+    $ foreman start
+
+    12:31:24 web.1  | started with pid 53657
+    12:31:24 web.1  | Hello World Loading
+    12:31:24 web.1  | Listening on port 5000
+
+Yeay! (Note default port of 5000)
+
+    $export PORT=6000
+
+    $foreman start
+    12:33:33 web.1  | started with pid 53760
+    12:33:33 web.1  | Hello World Loading
+    12:33:33 web.1  | Listening on port 6000
+
+Yeay! Able to set port
+
+##Create the App
+
+    $ heroku apps:create nodesayhello
 
 
 
